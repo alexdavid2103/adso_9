@@ -1,144 +1,202 @@
-<footer class="site-footer">
-    <div class="container">
-        <div class="row">
+<footer class="footer">
+      
+    <div class="footer-top section">
+      <div class="container">
 
-            <div class="col-lg-12 col-12 d-flex align-items-center mb-4 pb-2">
-                <div>
-                    <img src="assets/images/bubbles.png" class="logo img-fluid" alt="">
-                </div>
+        <div class="footer-brand">
 
-                <ul class="footer-menu d-flex flex-wrap ms-5">
-                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">About Us</a></li>
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" width="160" height="50" alt="Footcap logo">
+          </a>
 
-                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">Blog</a></li>
+          <ul class="social-list">
 
-                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">Reviews</a></li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
 
-                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact</a></li>
-                </ul>
-            </div>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
 
-            <div class="col-lg-5 col-12 mb-4 mb-lg-0">
-                <h5 class="site-footer-title mb-3">Our Services</h5>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
 
-                <ul class="footer-menu">
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">
-                            <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
-                            House Cleaning
-                        </a>
-                    </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
 
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">
-                            <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
-                            Car Washing
-                        </a>
-                    </li>
+          </ul>
 
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">
-                            <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
-                            Laundry
-                        </a>
-                    </li>
-
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">
-                            <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
-                            Office Cleaning
-                        </a>
-                    </li>
-
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">
-                            <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
-                            Toilet Cleaning
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mb-md-0">
-                <h5 class="site-footer-title mb-3">Office</h5>
-
-                <p class="text-white d-flex mt-3 mb-2">
-                    <i class="bi-geo-alt-fill me-2"></i>
-                    Akershusstranda 20, 0150 Oslo, Norway
-                </p>
-
-                <p class="text-white d-flex mb-2">
-                    <i class="bi-telephone-fill me-2"></i>
-
-                    <a href="tel: 110-220-9800" class="site-footer-link">
-                        110-220-9800
-                    </a>
-                </p>
-
-                <p class="text-white d-flex">
-                    <i class="bi-envelope-fill me-2"></i>
-
-                    <a href="mailto:info@company.com" class="site-footer-link">
-                        info@company.com
-                    </a>
-                </p>
-
-                <ul class="social-icon mt-4">
-                    <li class="social-icon-item">
-                        <a href="#" class="social-icon-link button button--skoll">
-                            <span></span>
-                            <span class="bi-twitter"></span>
-                        </a>
-                    </li>
-
-                    <li class="social-icon-item">
-                        <a href="#" class="social-icon-link button button--skoll">
-                            <span></span>
-                            <span class="bi-facebook"></span>
-                        </a>
-                    </li>
-
-                    <li class="social-icon-item">
-                        <a href="#" class="social-icon-link button button--skoll">
-                            <span></span>
-                            <span class="bi-instagram"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-6 mt-3 mt-lg-0 mt-md-0">
-                <div class="featured-block">
-                    <h5 class="text-white mb-3">Service Hours</h5>
-
-                    <strong class="d-block text-white mb-1">Mon - Fri</strong>
-
-                    <p class="text-white mb-3">8:00 AM - 5:30 PM</p>
-
-                    <strong class="d-block text-white mb-1">Sat</strong>
-
-                    <p class="text-white mb-0">6:00 AM - 2:30 PM</p>
-                </div>
-            </div>
         </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Contact Us</p>
+            </li>
+
+            <li>
+              <address class="footer-link">
+                <ion-icon name="location"></ion-icon>
+
+                <span class="footer-link-text">
+                  2751 S Parker Rd, Aurora, CO 80014, United States
+                </span>
+              </address>
+            </li>
+
+            <li>
+              <a href="tel:+557343673257" class="footer-link">
+                <ion-icon name="call"></ion-icon>
+
+                <span class="footer-link-text">+557343673257</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:footcap@help.com" class="footer-link">
+                <ion-icon name="mail"></ion-icon>
+
+                <span class="footer-link-text">footcap@help.com</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">My Account</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">My Account</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">View Cart</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">Wishlist</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">Compare</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">New Products</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Opening Time</p>
+
+            <table class="footer-table">
+              <tbody>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Mon - Tue:</th>
+
+                  <td class="table-data">8AM - 10PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Wed:</th>
+
+                  <td class="table-data">8AM - 7PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Fri:</th>
+
+                  <td class="table-data">7AM - 12PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Sat:</th>
+
+                  <td class="table-data">9AM - 8PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Sun:</th>
+
+                  <td class="table-data"></td>
+                </tr>
+
+              </tbody>
+            </table>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Newsletter</p>
+
+            <p class="newsletter-text">
+              Authoritatively morph 24/7 potentialities with error-free partnerships.
+            </p>
+
+            <form action="" class="newsletter-form">
+              <input type="email" name="email" required placeholder="Email Address" class="newsletter-input">
+
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
     </div>
 
-    <div class="site-footer-bottom">
-        <div class="container">
-            <div class="row">
+    <div class="footer-bottom">
+      <div class="container">
 
-                <div class="col-lg-6 col-12">
-                    <p class="copyright-text mb-0">Copyright © 2036 Clean Work Co., Ltd.</p>
-                </div>
-                
-                <div class="col-lg-6 col-12 text-end">
-                    <p class="copyright-text mb-0">
-                    // Designed by <a href="https://www.tooplate.com" target="_parent">Tooplate</a> //</p>
-                </div>
-                
-            </div>
-        </div>
+        <p class="copyright">
+          &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a>. All Rights Reserved
+        </p>
+
+      </div>
     </div>
-</footer>
+
+  </footer>
+
 
 @yield('footer')

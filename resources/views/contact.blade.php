@@ -1,203 +1,156 @@
-@extends('layout.padre')
+@extends('layout.app')
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-        <meta name="description" content="">
-        <meta name="author" content="">
+<head>
+    <title>Zay Shop - Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Contact | Bootstrap 5 Theme</title>
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-        <!-- CSS FILES -->        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 
-        <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="assets/css/tooplate-clean-work.css" rel="stylesheet">
+    <!-- Load map styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
 <!--
+    
+TemplateMo 559 Zay Shop
 
-Tooplate 2132 Clean Work
-
-https://www.tooplate.com/view/2132-clean-work
-
-Free Bootstrap 5 HTML Template
+https://templatemo.com/tm-559-zay-shop
 
 -->
-    </head>
-    
-    <body>
+</head>
 
-        @section('content')
+<body>
+    <!-- Start Top Nav -->
+    @section('content')
+    <!-- Close Header -->
 
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/bubbles.png" class="logo img-fluid" alt="">
-
-                    <span class="ms-2">Clean Work</span>
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about">About Us</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-
-                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="detail-page">Our Services</a></li>
-
-                                <li><a class="dropdown-item" href="listing.page">Coming Soon</a></li>
-
-                                {{-- <li><a class="dropdown-item" href="page-404.html">Page 404</a></li> --}}
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="contact">Contact</a>
-                        </li>
-
-                        <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="#">Get started</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        </nav>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-        <main>
 
-            <section class="banner-section d-flex justify-content-center align-items-end">
-                <div class="section-overlay"></div>
+    <!-- Start Content Page -->
+    <div class="container-fluid bg-light py-5">
+        <div class="col-md-6 m-auto text-center">
+            <h1 class="h1">Contact Us</h1>
+            <p>
+                Proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet.
+            </p>
+        </div>
+    </div>
 
-                <div class="container">
-                    <div class="row">
+    <!-- Start Map -->
+    <div id="mapid" style="width: 100%; height: 300px;"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script>
+        var mymap = L.map('mapid').setView([-23.013104, -43.394365, 13], 13);
 
-                        <div class="col-lg-7 col-12">
-                            <h1 class="text-white mb-lg-0">Contact</h1>
-                        </div>
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Zay Telmplte | Template Design by <a href="https://templatemo.com/">Templatemo</a> | Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1
+        }).addTo(mymap);
 
-                        <div class="col-lg-4 col-12 d-flex justify-content-lg-end align-items-center ms-auto">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+        L.marker([-23.013104, -43.394365, 13]).addTo(mymap)
+            .bindPopup("<b>Zay</b> eCommerce Template<br />Location.").openPopup();
 
-                                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
-                                </ol>
-                            </nav>
-                        </div>
+        mymap.scrollWheelZoom.disable();
+        mymap.touchZoom.disable();
+    </script>
+    <!-- Ena Map -->
 
+    <!-- Start Contact -->
+    <div class="container py-5">
+        <div class="row py-5">
+            <form class="col-md-9 m-auto" method="post" role="form">
+                <div class="row">
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputname">Name</label>
+                        <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputemail">Email</label>
+                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email">
                     </div>
                 </div>
-            </section>
-         
-
-            <section class="contact-section section-padding">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-5 col-12 me-auto mb-lg-0 mb-5">
-                            <h2 class="my-3">We're happy to help</h2>
-
-                            <p>Best Cleaning Service is ready to serve you. Clean Work is a professional website layout for your business.</p>
-
-                            <div class="contact-info bg-white shadow-lg">
-                                <h3 class="mb-4">Contact Information</h3>
-
-                                <h5 class="d-flex mt-3 mb-3">
-                                    <i class="bi-geo-alt-fill custom-icon me-3"></i>
-                                    Akershusstranda 20, 0150 Oslo, Norway
-                                </h5>
-
-                                <h5 class="d-flex mb-3">
-                                    <i class="bi-telephone-fill custom-icon me-3"></i>
-
-                                    <a href="tel: 110-220-9800">
-                                        110-220-9800
-                                    </a>
-                                </h5>
-
-                                <h5 class="d-flex">
-                                    <i class="bi-envelope-fill custom-icon me-3"></i>
-
-                                    <a href="mailto:info@company.com">
-                                        info@company.com
-                                    </a>
-                                </h5>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <form class="custom-form consulting-form bg-white shadow-lg mb-5 mb-lg-0" action="#" method="post" role="form">
-                                <div class="consulting-form-header d-flex align-items-center">
-                                    <h3 class="mb-4">Get a Free Quotation</h3>
-                                </div>
-
-                                <div class="consulting-form-body">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-12">
-                                            <input type="text" name="volunteer-name" id="volunteer-name" class="form-control" placeholder="John Walker" required>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-12">
-                                            <input type="email" name="volunteer-email" id="volunteer-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="yours@gmail.com" required>
-                                        </div>
-                                    </div>
-
-                                    <select class="form-select form-control" name="job-salary" id="job-salary" aria-label="Default select example">
-                                        <option selected>Service Type</option>
-                                        <option value="1">House cleaning</option>
-                                        <option value="2">Car washing</option>
-                                        <option value="2">Office cleaning</option>
-                                        <option value="2">Factory cleaning</option>
-                                    </select>
-
-                                    <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message" placeholder="Comment (Optional)"></textarea>
-
-                                    <div class="col-lg-6 col-md-10 col-8 mx-auto">
-                                        <button type="submit" class="form-control">Submit Request</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
+                <div class="mb-3">
+                    <label for="inputsubject">Subject</label>
+                    <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Subject">
+                </div>
+                <div class="mb-3">
+                    <label for="inputmessage">Message</label>
+                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Message" rows="8"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col text-end mt-2">
+                        <button type="submit" class="btn btn-success btn-lg px-3">Let’s Talk</button>
                     </div>
                 </div>
-            </section>
-        </main>
+            </form>
+        </div>
+    </div>
+    <!-- End Contact -->
 
-        @include('layout.footer')
 
-        <!-- JAVASCRIPT FILES -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/counter.js"></script>
-        <script src="assets/js/countdown.js"></script>
-        <script src="assets/js/init.js"></script>
-        <script src="assets/js/modernizr.js"></script>
-        <script src="assets/js/animated-headline.js"></script>
-        <script src="assets/js/custom.js"></script>
+    <!-- Start Footer -->
+    @include('layout.footer')
+    <!-- End Footer -->
 
-    </body>
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <a href="#top" class="go-top-btn" data-go-top>
+        <ion-icon name="arrow-up-outline"></ion-icon>
+      </a>
+    
+    
+    
+    
+    
+      <!-- 
+        - custom js link
+      -->
+      <script src="./assets/js/script.js"></script>
+    
+      <!-- 
+        - ionicon link
+      -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- End Script -->
+</body>
+
 </html>
 @stop

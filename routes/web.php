@@ -25,14 +25,14 @@ Route::get('contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('detail-page', function () {
-    return view('detail-page');
-})->name('detail-page');
+Route::get('products', function () {
+    return view('products');
+})->name('products');
 
 Route::get('listing-page', function () {
     return view('listing-page');
 })->name('listing-page');
 
-Route::get('services-detail', function () {
-    return view('services-detail');
-})->name('services-detail');
+Route::get('shop', function () {
+    return view('shop');
+})->name('shop');

@@ -2,777 +2,1529 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <title>Clean</title>
-
-        <!-- CSS FILES -->        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Footcap - Find your footware</title>
+      
+        <!-- 
+          - favicon
+        -->
+        <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+      
+        <!-- 
+          - custom css link
+        -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+      
+        <!-- 
+          - google font link
+        -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+        <link
+          href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+          rel="stylesheet">
+      
+        <!-- 
+          - preload banner
+        -->
+        <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+      
+      </head>
+      <body id="top">
 
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
-        <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="assets/css/tooplate-clean-work.css" rel="stylesheet">
-
-<!--
-
-Tooplate 2132 Clean Work
-
-https://www.tooplate.com/view/2132-clean-work
-
-Free Bootstrap 5 HTML Template
-
--->
-    </head>
-    <body>
-
-        <header class="site-header">
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="col-lg-12 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-house-fill me-2"></i>
-                            One-Stop Cleaning Service
-                        </p>
-
-                        <p class="d-flex d-lg-block d-md-block d-none me-4 mb-0">
-                            <i class="bi-clock-fill me-2"></i>
-                            <strong class="me-2">Mon - Fri</strong> 8:00 AM - 5:30 PM
-                        </p>
-
-                        <p class="site-header-icon-wrap text-white d-flex mb-0 ms-auto">
-                            <i class="site-header-icon bi-whatsapp me-2"></i>
-
-                            <a href="tel: 110-220-9800" class="text-white">
-                                110 220 9800
-                            </a>
-                        </p>
-                    </div>
-
-                </div>
-            </div>
+        <!-- 
+          - #HEADER
+        -->
+      
+        <header class="header" data-header>
+          <div class="container">
+      
+            <div class="overlay" data-overlay></div>
+      
+            <a href="#" class="logo">
+              <img src="./assets/images/logo.svg" width="160" height="50" alt="Footcap logo">
+            </a>
+      
+            <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+      
+            <nav class="navbar" data-navbar>
+      
+              <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+      
+              <a href="#" class="logo">
+                <img src="./assets/images/logo.svg" width="190" height="50" alt="Footcap logo">
+              </a>
+      
+              <ul class="navbar-list">
+      
+                <li class="navbar-item">
+                  <a href="#" class="navbar-link">Home</a>
+                </li>
+      
+                <li class="navbar-item">
+                  <a href="about" class="navbar-link">About</a>
+                </li>
+      
+                <li class="navbar-item">
+                  <a href="#" class="navbar-link">Products</a>
+                </li>
+      
+                <li class="navbar-item">
+                  <a href="shop" class="navbar-link">Shop</a>
+                </li>
+      
+                {{-- <li class="navbar-item">
+                  <a href="#" class="navbar-link">Blog</a>
+                </li> --}}
+      
+                <li class="navbar-item">
+                  <a href="contact" class="navbar-link">Contact</a>
+                </li>
+      
+              </ul>
+      
+              <ul class="nav-action-list">
+      
+                <li>
+                  <button class="nav-action-btn">
+                    <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+      
+                    <span class="nav-action-text">Search</span>
+                  </button>
+                </li>
+      
+                <li>
+                  <a href="#" class="nav-action-btn">
+                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+      
+                    <span class="nav-action-text">Login / Register</span>
+                  </a>
+                </li>
+      
+                <li>
+                  <button class="nav-action-btn">
+                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+      
+                    <span class="nav-action-text">Wishlist</span>
+      
+                    <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+                  </button>
+                </li>
+      
+                <li>
+                  <button class="nav-action-btn">
+                    <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+      
+                    <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
+      
+                    <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+                  </button>
+                </li>
+      
+              </ul>
+      
+            </nav>
+      
+          </div>
         </header>
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/bubbles.png" class="logo img-fluid" alt="">
-
-                    <span class="ms-2">Clean Work</span>
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about">About Us</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-
-                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="detail-page">Our Services</a></li>
-
-                                <li><a class="dropdown-item" href="listing-page">Coming Soon</a></li>
-
-                                {{-- <li><a class="dropdown-item" href="page-404.html">Page 404</a></li> --}}
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact">Contact</a>
-                        </li>
-
-                        <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="#">Get started</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
+      
+      
+      
+      
+      
         <main>
-
-            <section class="hero-section hero-section-full-height d-flex justify-content-center align-items-center">
-                <div class="section-overlay"></div>
-
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-7 col-12 text-center mx-auto">
-                            <h1 class="cd-headline rotate-1 text-white mb-4 pb-2">
-                                <span>We clean your</span>
-                                <span class="cd-words-wrapper">
-                                    <b class="is-visible">House</b>
-                                    <b>Office</b>
-                                    <b>Kitchen</b>
-                                </span>
-                            </h1>
-
-                            <a class="custom-btn btn button button--atlas smoothscroll me-3" href="#intro-section">
-                                <span>Introduction</span>
-
-                                <div class="marquee" aria-hidden="true">
-                                    <div class="marquee__inner">
-                                        <span>Introduction</span>
-                                        <span>Introduction</span>
-                                        <span>Introduction</span>
-                                        <span>Introduction</span>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a class="custom-btn custom-border-btn custom-btn-bg-white btn button button--pan smoothscroll" href="#services-section">
-                                <span>Explore Services</span>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L40,229.3C80,235,160,245,240,250.7C320,256,400,256,480,240C560,224,640,192,720,176C800,160,880,160,960,138.7C1040,117,1120,75,1200,80C1280,85,1360,139,1400,165.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+          <article>
+      
+            <!-- 
+              - #HERO
+            -->
+      
+            <section class="section hero" style="background-image: url('./assets/images/hero-banner.png')">
+              <div class="container">
+      
+                <h2 class="h1 hero-title">
+                  New Summer <strong>Shoes Collection</strong>
+                </h2>
+      
+                <p class="hero-text">
+                  Competently expedite alternative benefits whereas leading-edge catalysts for change. Globally leverage
+                  existing an
+                  expanded array of leadership.
+                </p>
+      
+                <button class="btn btn-primary">
+                  <span>Shop Now</span>
+      
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </button>
+      
+              </div>
             </section>
-
-
-            <section class="intro-section" id="intro-section">
-                <div class="container">
-                    <div class="row justify-content-lg-center align-items-center">
-
-                        <div class="col-lg-6 col-12">
-                            <h2 class="mb-4">Reliable &amp; Fast Cleaning <br> Service</h2>
-
-                            <p><a href="#">Clean Work</a> is a Bootstrap v.5.1.3 HTML CSS template for free download provided by Tooplate. You can use this layout for any purpose. Images are taken from <a rel="nofollow" href="https://www.freepik.com/" target="_blank">FreePik</a> and <a rel="nofollow" href="https://worldvectorlogo.com/" target="_blank">WorldVectorLogo</a> websites.</p>
-                            <p>You <strong>may not</strong> redistribute this template ZIP file on any other template collection website. Please <a href="https://www.tooplate.com/contact" target="_blank">contact us</a> for more info. Thank you.</p>
-                        </div>
-
-                        <div class="col-lg-6 col-12 custom-block-wrap">
-                            <img src="assets/images/male-wearing-apron-female-white-t-shirt-smiling-broadly-being-glad-clean.png" class="img-fluid">
-
-                            <div class="custom-block d-flex flex-column">
-                                <h6 class="text-white mb-3">Need Help? <br> Please call us:</h6>
-
-                                <p class="d-flex mb-0">
-                                    <i class="bi-telephone-fill custom-icon me-2"></i>
-
-                                    <a href="tel: 110-220-9800">
-                                        110-220-9800
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-
+      
+      
+      
+      
+      
+            <!-- 
+              - #COLLECTION
+            -->
+      
+            <section class="section collection">
+              <div class="container">
+      
+                <ul class="collection-list has-scrollbar">
+      
+                  <li>
+                    <div class="collection-card" style="background-image: url('./assets/images/collection-1.jpg')">
+                      <h3 class="h4 card-title">Men Collections</h3>
+      
+                      <a href="#" class="btn btn-secondary">
+                        <span>Explore All</span>
+      
+                        <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                      </a>
                     </div>
-                </div>
-            </section>
-
-
-            <section class="services-section section-padding section-bg" id="services-section">                
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-12 col-12">
-                            <h2 class="mb-4">Our best offers</h2>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="services-detail">
-                                                <img src="assets/images/services/people-taking-care-office-cleaning.jpg" class="services-image img-fluid" alt="">
-                                                <img src="assets/images/services/person-taking-care-office.jpg" class="services-image services-image-hover img-fluid" alt="">
-
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <p class="text-white mb-0">
-                                                            <i class="bi-cash me-2"></i>
-                                                            $820
-                                                        </p>
-
-                                                        <p class="text-white mb-0">
-                                                            <i class="bi-clock-fill me-2"></i>
-                                                            5 hrs
-                                                        </p>
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="services-detail">Office Cleaning</a>
-                                            </h4>
-
-                                            <p>Best Cleaning Service Provider Ipsum dolor sit consectetur kengan</p>
-
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                <div class="reviews-icons">
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star"></i>
-                                                    <i class="bi-star"></i>
-                                                </div>
-
-                                                <a href="services-detail" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Learn More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="services-detail">
-                                                <img src="assets/images/services/young-smiling-woman-wearing-rubber-gloves-cleaning-stove.jpg" class="services-image img-fluid" alt="">
-                                                <img src="assets/images/services/woman-holding-rag-detergent-cleaning-cooker.jpg" class="services-image services-image-hover img-fluid" alt="">
-
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <p class="text-white mb-0">
-                                                            <i class="bi-cash me-2"></i>
-                                                            $640
-                                                        </p>
-
-                                                        <p class="text-white mb-0">
-                                                            <i class="bi-clock-fill me-2"></i>
-                                                            4 hrs
-                                                        </p>
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="services-detail">Kitchen Cleaning</a>
-                                            </h4>
-
-                                            <p>Best Cleaning Service Provider Ipsum dolor sit consectetur kengan</p>
-
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                <div class="reviews-icons">
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                </div>
-
-                                                <a href="services-detail.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Learn More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb mb-lg-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="services-detail">
-                                                <img src="assets/images/services/man-polishing-car-inside-car-service.jpg" class="services-image img-fluid" alt="">
-                                                <img src="assets/images/services/man-polishing-car-inside.jpg" class="services-image services-image-hover img-fluid" alt="">
-
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <p class="text-white mb-0">
-                                                            <i class="bi-cash me-2"></i>
-                                                            $240
-                                                        </p>
-
-                                                        <p class="text-white mb-0">
-                                                            <i class="bi-clock-fill me-2"></i>
-                                                            2 hrs
-                                                        </p>
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="services-detail.html">Car Washing</a>
-                                            </h4>
-
-                                            <p>Best Cleaning Service Provider Ipsum dolor sit consectetur kengan</p>
-
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                <div class="reviews-icons">
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                </div>
-
-                                                <a href="services-detail.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Learn More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb mb-lg-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="services-detail">
-                                                <img src="assets/images/services/professional-industrial-cleaner-protective-uniform-cleaning-floor-food-processing-plant.jpg" class="services-image img-fluid" alt="">
-                                                <img src="assets/images/services/close-up-mop-cleaning-industrial-plant-floor.jpg" class="services-image services-image-hover img-fluid" alt="">
-
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <p class="text-white mb-0">
-                                                            <i class="bi-cash me-2"></i>
-                                                            $6,800
-                                                        </p>
-
-                                                        <p class="text-white mb-0">
-                                                            <i class="bi-clock-fill me-2"></i>
-                                                            30 hrs
-                                                        </p>
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="services-detail.html">Factory Cleaning</a>
-                                            </h4>
-
-                                            <p>Best Cleaning Service Provider Ipsum dolor sit consectetur kengan</p>
-
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                <div class="reviews-icons">
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star"></i>
-                                                </div>
-
-                                                <a href="services-detail.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Learn More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                  </li>
+      
+                  <li>
+                    <div class="collection-card" style="background-image: url('./assets/images/collection-2.jpg')">
+                      <h3 class="h4 card-title">Women Collections</h3>
+      
+                      <a href="#" class="btn btn-secondary">
+                        <span>Explore All</span>
+      
+                        <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                      </a>
                     </div>
-                </div>
-            </section>
-
-
-            <section class="testimonial-section section-padding section-bg">
-                <div class="section-overlay"></div>
-
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-12 col-12 text-center">
-                            <h2 class="text-white mb-4">Happy Customers</h2>
-                        </div>
-
-                        <div class="col-lg-4 col-12">
-                            <div class="featured-block">
-                                <div class="d-flex align-items-center mb-3">
-                                    <img src="assets/images/avatar/happy-customer-01.jpg" class="avatar-image img-fluid">
-
-                                    <div class="ms-3">
-                                        <h4 class="mb-0">Marie</h4>
-
-                                        <div class="reviews-icons mb-1">
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <p class="mb-0">Best Cleaning Service Provider Ipsum dolor sit consectetur kengan</p>
-                            </div>
-
-                            <div class="featured-block mb-lg-0">
-                                <div class="d-flex align-items-center mb-3">
-                                    <img src="assets/images/avatar/happy-customer-02.jpg" class="avatar-image img-fluid">
-
-                                    <div class="ms-3">
-                                        <h4 class="mb-0">Nana</h4>
-
-                                        <div class="reviews-icons mb-1">
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-12">
-                            <div class="featured-block">
-                                <div class="d-flex align-items-center mb-3">
-                                    <img src="assets/images/avatar/happy-customer-03.jpg" class="avatar-image img-fluid">
-
-                                    <div class="ms-3">
-                                        <h4 class="mb-0">Elon</h4>
-
-                                        <div class="reviews-icons mb-1">
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                            </div>
-
-                            <div class="featured-block mb-lg-0">
-                                <div class="d-flex align-items-center mb-3">
-                                    <img src="assets/images/avatar/happy-customer-04.jpg" class="avatar-image img-fluid">
-
-                                    <div class="ms-3">
-                                        <h4 class="mb-0">Josh</h4>
-
-                                        <div class="reviews-icons mb-1">
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star"></i>
-                                            <i class="bi-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-12">
-                            <div class="featured-block">
-                                <div class="d-flex align-items-center mb-3">
-                                    <img src="assets/images/avatar/happy-customer-05.jpg" class="avatar-image img-fluid">
-
-                                    <div class="ms-3">
-                                        <h4 class="mb-0">Katie</h4>
-
-                                        <div class="reviews-icons mb-1">
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                            </div>
-
-                            <div class="featured-block mb-lg-0">
-                                <div class="d-flex align-items-center mb-3">
-                                    <img src="assets/images/avatar/happy-customer-06.jpg" class="avatar-image img-fluid">
-
-                                    <div class="ms-3">
-                                        <h4 class="mb-0">Shai</h4>
-
-                                        <div class="reviews-icons mb-1">
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star-fill"></i>
-                                            <i class="bi-star"></i>
-                                            <i class="bi-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                            </div>
-                        </div>
-
+                  </li>
+      
+                  <li>
+                    <div class="collection-card" style="background-image: url('./assets/images/collection-3.jpg')">
+                      <h3 class="h4 card-title">Sports Collections</h3>
+      
+                      <a href="#" class="btn btn-secondary">
+                        <span>Explore All</span>
+      
+                        <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                      </a>
                     </div>
-                </div>
+                  </li>
+      
+                </ul>
+      
+              </div>
             </section>
-
-
-            <section class="partners-section">
-                <div class="container">
-                    <div class="row justify-content-center align-items-center">
-
-                        <div class="col-lg-12 col-12">
-                            <h4 class="partners-section-title bg-white shadow-lg">Trusted by companies</h4>
+      
+      
+      
+      
+      
+            <!-- 
+              - #PRODUCT
+            -->
+      
+            <section class="section product">
+              <div class="container">
+      
+                <h2 class="h2 section-title">Bestsellers Products</h2>
+      
+                <ul class="filter-list">
+      
+                  <li>
+                    <button class="filter-btn  active">All</button>
+                  </li>
+      
+                  <li>
+                    <button class="filter-btn">Nike</button>
+                  </li>
+      
+                  <li>
+                    <button class="filter-btn">Adidas</button>
+                  </li>
+      
+                  <li>
+                    <button class="filter-btn">Puma</button>
+                  </li>
+      
+                  <li>
+                    <button class="filter-btn">Bata</button>
+                  </li>
+      
+                  <li>
+                    <button class="filter-btn">Apex</button>
+                  </li>
+      
+                </ul>
+      
+                <ul class="product-list">
+      
+                  <li class="product-item">
+                    <div class="product-card" tabindex="0">
+      
+                      <figure class="card-banner">
+                        <img src="./assets/images/product-1.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+      
+                        <div class="card-badge">New</div>
+      
+                        <ul class="card-action-list">
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-1">
+                              <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-2">
+                              <ion-icon name="heart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-3">
+                              <ion-icon name="eye-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-4">
+                              <ion-icon name="repeat-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                          </li>
+      
+                        </ul>
+                      </figure>
+      
+                      <div class="card-content">
+      
+                        <div class="card-cat">
+                          <a href="#" class="card-cat-link">Men</a> /
+                          <a href="#" class="card-cat-link">Women</a>
                         </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="assets/images/partners/toprak-leasing.svg" class="partners-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="assets/images/partners/glorix.svg" class="partners-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="assets/images/partners/woocommerce.svg" class="partners-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="assets/images/partners/rolf-leasing.svg" class="partners-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="assets/images/partners/unilabs.svg" class="partners-image img-fluid">
-                        </div>
-
+      
+                        <h3 class="h3 card-title">
+                          <a href="#">Running Sneaker Shoes</a>
+                        </h3>
+      
+                        <data class="card-price" value="180.85">$180.85</data>
+      
+                      </div>
+      
                     </div>
-                </div>
+                  </li>
+      
+                  <li class="product-item">
+                    <div class="product-card" tabindex="0">
+      
+                      <figure class="card-banner">
+                        <img src="./assets/images/product-2.jpg" width="312" height="350" loading="lazy"
+                          alt="Leather Mens Slipper" class="image-contain">
+      
+                        <ul class="card-action-list">
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-1">
+                              <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-2">
+                              <ion-icon name="heart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-3">
+                              <ion-icon name="eye-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-4">
+                              <ion-icon name="repeat-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                          </li>
+      
+                        </ul>
+                      </figure>
+      
+                      <div class="card-content">
+      
+                        <div class="card-cat">
+                          <a href="#" class="card-cat-link">Men</a> /
+                          <a href="#" class="card-cat-link">Sports</a>
+                        </div>
+      
+                        <h3 class="h3 card-title">
+                          <a href="#">Leather Mens Slipper</a>
+                        </h3>
+      
+                        <data class="card-price" value="190.85">$190.85</data>
+      
+                      </div>
+      
+                    </div>
+                  </li>
+      
+                  <li class="product-item">
+                    <div class="product-card" tabindex="0">
+      
+                      <figure class="card-banner">
+                        <img src="./assets/images/product-3.jpg" width="312" height="350" loading="lazy"
+                          alt="Simple Fabric Shoe" class="image-contain">
+      
+                        <div class="card-badge">New</div>
+      
+                        <ul class="card-action-list">
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-1">
+                              <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-2">
+                              <ion-icon name="heart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-3">
+                              <ion-icon name="eye-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-4">
+                              <ion-icon name="repeat-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                          </li>
+      
+                        </ul>
+                      </figure>
+      
+                      <div class="card-content">
+      
+                        <div class="card-cat">
+                          <a href="#" class="card-cat-link">Men</a> /
+                          <a href="#" class="card-cat-link">Women</a>
+                        </div>
+      
+                        <h3 class="h3 card-title">
+                          <a href="#">Simple Fabric Shoe</a>
+                        </h3>
+      
+                        <data class="card-price" value="160.85">$160.85</data>
+      
+                      </div>
+      
+                    </div>
+                  </li>
+      
+                  <li class="product-item">
+                    <div class="product-card" tabindex="0">
+      
+                      <figure class="card-banner">
+                        <img src="./assets/images/product-4.jpg" width="312" height="350" loading="lazy"
+                          alt="Air Jordan 7 Retro " class="image-contain">
+      
+                        <div class="card-badge"> -25%</div>
+      
+                        <ul class="card-action-list">
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-1">
+                              <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-2">
+                              <ion-icon name="heart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-3">
+                              <ion-icon name="eye-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-4">
+                              <ion-icon name="repeat-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                          </li>
+      
+                        </ul>
+                      </figure>
+      
+                      <div class="card-content">
+      
+                        <div class="card-cat">
+                          <a href="#" class="card-cat-link">Men</a> /
+                          <a href="#" class="card-cat-link">Sports</a>
+                        </div>
+      
+                        <h3 class="h3 card-title">
+                          <a href="#">Air Jordan 7 Retro </a>
+                        </h3>
+      
+                        <data class="card-price" value="170.85">$170.85 <del>$200.21</del></data>
+      
+                      </div>
+      
+                    </div>
+                  </li>
+      
+                  <li class="product-item">
+                    <div class="product-card" tabindex="0">
+      
+                      <figure class="card-banner">
+                        <img src="./assets/images/product-5.jpg" width="312" height="350" loading="lazy"
+                          alt="Nike Air Max 270 SE" class="image-contain">
+      
+                        <div class="card-badge">New</div>
+      
+                        <ul class="card-action-list">
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-1">
+                              <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-2">
+                              <ion-icon name="heart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-3">
+                              <ion-icon name="eye-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-4">
+                              <ion-icon name="repeat-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                          </li>
+      
+                        </ul>
+                      </figure>
+      
+                      <div class="card-content">
+      
+                        <div class="card-cat">
+                          <a href="#" class="card-cat-link">Men</a> /
+                          <a href="#" class="card-cat-link">Women</a>
+                        </div>
+      
+                        <h3 class="h3 card-title">
+                          <a href="#">Nike Air Max 270 SE</a>
+                        </h3>
+      
+                        <data class="card-price" value="120.85">$120.85</data>
+      
+                      </div>
+      
+                    </div>
+                  </li>
+      
+                  <li class="product-item">
+                    <div class="product-card" tabindex="0">
+      
+                      <figure class="card-banner">
+                        <img src="./assets/images/product-6.jpg" width="312" height="350" loading="lazy"
+                          alt="Adidas Sneakers Shoes" class="image-contain">
+      
+                        <ul class="card-action-list">
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-1">
+                              <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-2">
+                              <ion-icon name="heart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-3">
+                              <ion-icon name="eye-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-4">
+                              <ion-icon name="repeat-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                          </li>
+      
+                        </ul>
+                      </figure>
+      
+                      <div class="card-content">
+      
+                        <div class="card-cat">
+                          <a href="#" class="card-cat-link">Men</a> /
+                          <a href="#" class="card-cat-link">Women</a>
+                        </div>
+      
+                        <h3 class="h3 card-title">
+                          <a href="#">Adidas Sneakers Shoes</a>
+                        </h3>
+      
+                        <data class="card-price" value="100.85">$100.85</data>
+      
+                      </div>
+      
+                    </div>
+                  </li>
+      
+                  <li class="product-item">
+                    <div class="product-card" tabindex="0">
+      
+                      <figure class="card-banner">
+                        <img src="./assets/images/product-7.jpg" width="312" height="350" loading="lazy"
+                          alt="Nike Basketball shoes" class="image-contain">
+      
+                        <ul class="card-action-list">
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-1">
+                              <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-2">
+                              <ion-icon name="heart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-3">
+                              <ion-icon name="eye-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-4">
+                              <ion-icon name="repeat-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                          </li>
+      
+                        </ul>
+                      </figure>
+      
+                      <div class="card-content">
+      
+                        <div class="card-cat">
+                          <a href="#" class="card-cat-link">Men</a> /
+                          <a href="#" class="card-cat-link">Sports</a>
+                        </div>
+      
+                        <h3 class="h3 card-title">
+                          <a href="#">Nike Basketball shoes</a>
+                        </h3>
+      
+                        <data class="card-price" value="120.85">$120.85</data>
+      
+                      </div>
+      
+                    </div>
+                  </li>
+      
+                  <li class="product-item">
+                    <div class="product-card" tabindex="0">
+      
+                      <figure class="card-banner">
+                        <img src="./assets/images/product-8.jpg" width="312" height="350" loading="lazy"
+                          alt="Simple Fabric Shoe" class="image-contain">
+      
+                        <ul class="card-action-list">
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-1">
+                              <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-2">
+                              <ion-icon name="heart-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-3">
+                              <ion-icon name="eye-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                          </li>
+      
+                          <li class="card-action-item">
+                            <button class="card-action-btn" aria-labelledby="card-label-4">
+                              <ion-icon name="repeat-outline"></ion-icon>
+                            </button>
+      
+                            <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                          </li>
+      
+                        </ul>
+                      </figure>
+      
+                      <div class="card-content">
+      
+                        <div class="card-cat">
+                          <a href="#" class="card-cat-link">Men</a> /
+                          <a href="#" class="card-cat-link">Women</a>
+                        </div>
+      
+                        <h3 class="h3 card-title">
+                          <a href="#">Simple Fabric Shoe</a>
+                        </h3>
+      
+                        <data class="card-price" value="100.85">$100.85</data>
+      
+                      </div>
+      
+                    </div>
+                  </li>
+      
+                </ul>
+      
+              </div>
             </section>
+      
+      
+      
+      
+      
+            <!-- 
+              - #CTA
+            -->
+      
+            <section class="section cta">
+              <div class="container">
+      
+                <ul class="cta-list">
+      
+                  <li>
+                    <div class="cta-card" style="background-image: url('./assets/images/cta-1.jpg')">
+                      <p class="card-subtitle">Adidas Shoes</p>
+      
+                      <h3 class="h2 card-title">The Summer Sale Off 50%</h3>
+      
+                      <a href="#" class="btn btn-link">
+                        <span>Shop Now</span>
+      
+                        <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+      
+                  <li>
+                    <div class="cta-card" style="background-image: url('./assets/images/cta-2.jpg')">
+                      <p class="card-subtitle">Nike Shoes</p>
+      
+                      <h3 class="h2 card-title">Makes Yourself Keep Sporty</h3>
+      
+                      <a href="#" class="btn btn-link">
+                        <span>Shop Now</span>
+      
+                        <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+      
+                </ul>
+      
+              </div>
+            </section>
+      
+      
+      
+      
+      
+            <!-- 
+              - #SPECIAL
+            -->
+      
+            <section class="section special">
+              <div class="container">
+      
+                <div class="special-banner" style="background-image: url('./assets/images/special-banner.jpg')">
+                  <h2 class="h3 banner-title">New Trend Edition</h2>
+      
+                  <a href="#" class="btn btn-link">
+                    <span>Explore All</span>
+      
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+      
+                <div class="special-product">
+      
+                  <h2 class="h2 section-title">
+                    <span class="text">Nike Special</span>
+      
+                    <span class="line"></span>
+                  </h2>
+      
+                  <ul class="has-scrollbar">
+      
+                    <li class="product-item">
+                      <div class="product-card" tabindex="0">
+      
+                        <figure class="card-banner">
+                          <img src="./assets/images/product-1.jpg" width="312" height="350" loading="lazy"
+                            alt="Running Sneaker Shoes" class="image-contain">
+      
+                          <div class="card-badge">New</div>
+      
+                          <ul class="card-action-list">
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-1">
+                                <ion-icon name="cart-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                            </li>
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-2">
+                                <ion-icon name="heart-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                            </li>
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-3">
+                                <ion-icon name="eye-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                            </li>
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-4">
+                                <ion-icon name="repeat-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                            </li>
+      
+                          </ul>
+                        </figure>
+      
+                        <div class="card-content">
+      
+                          <div class="card-cat">
+                            <a href="#" class="card-cat-link">Men</a> /
+                            <a href="#" class="card-cat-link">Women</a>
+                          </div>
+      
+                          <h3 class="h3 card-title">
+                            <a href="#">Running Sneaker Shoes</a>
+                          </h3>
+      
+                          <data class="card-price" value="180.85">$180.85</data>
+      
+                        </div>
+      
+                      </div>
+                    </li>
+      
+                    <li class="product-item">
+                      <div class="product-card" tabindex="0">
+      
+                        <figure class="card-banner">
+                          <img src="./assets/images/product-2.jpg" width="312" height="350" loading="lazy"
+                            alt="Leather Mens Slipper" class="image-contain">
+      
+                          <ul class="card-action-list">
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-1">
+                                <ion-icon name="cart-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                            </li>
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-2">
+                                <ion-icon name="heart-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                            </li>
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-3">
+                                <ion-icon name="eye-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                            </li>
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-4">
+                                <ion-icon name="repeat-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                            </li>
+      
+                          </ul>
+                        </figure>
+      
+                        <div class="card-content">
+      
+                          <div class="card-cat">
+                            <a href="#" class="card-cat-link">Men</a> /
+                            <a href="#" class="card-cat-link">Sports</a>
+                          </div>
+      
+                          <h3 class="h3 card-title">
+                            <a href="#">Leather Mens Slipper</a>
+                          </h3>
+      
+                          <data class="card-price" value="190.85">$190.85</data>
+      
+                        </div>
+      
+                      </div>
+                    </li>
+      
+                    <li class="product-item">
+                      <div class="product-card" tabindex="0">
+      
+                        <figure class="card-banner">
+                          <img src="./assets/images/product-3.jpg" width="312" height="350" loading="lazy"
+                            alt="Simple Fabric Shoe" class="image-contain">
+      
+                          <div class="card-badge">New</div>
+      
+                          <ul class="card-action-list">
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-1">
+                                <ion-icon name="cart-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                            </li>
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-2">
+                                <ion-icon name="heart-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                            </li>
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-3">
+                                <ion-icon name="eye-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                            </li>
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-4">
+                                <ion-icon name="repeat-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                            </li>
+      
+                          </ul>
+                        </figure>
+      
+                        <div class="card-content">
+      
+                          <div class="card-cat">
+                            <a href="#" class="card-cat-link">Men</a> /
+                            <a href="#" class="card-cat-link">Women</a>
+                          </div>
+      
+                          <h3 class="h3 card-title">
+                            <a href="#">Simple Fabric Shoe</a>
+                          </h3>
+      
+                          <data class="card-price" value="160.85">$160.85</data>
+      
+                        </div>
+      
+                      </div>
+                    </li>
+      
+                    <li class="product-item">
+                      <div class="product-card" tabindex="0">
+      
+                        <figure class="card-banner">
+                          <img src="./assets/images/product-4.jpg" width="312" height="350" loading="lazy"
+                            alt="Air Jordan 7 Retro " class="image-contain">
+      
+                          <div class="card-badge"> -25%</div>
+      
+                          <ul class="card-action-list">
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-1">
+                                <ion-icon name="cart-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                            </li>
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-2">
+                                <ion-icon name="heart-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                            </li>
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-3">
+                                <ion-icon name="eye-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                            </li>
+      
+                            <li class="card-action-item">
+                              <button class="card-action-btn" aria-labelledby="card-label-4">
+                                <ion-icon name="repeat-outline"></ion-icon>
+                              </button>
+      
+                              <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                            </li>
+      
+                          </ul>
+                        </figure>
+      
+                        <div class="card-content">
+      
+                          <div class="card-cat">
+                            <a href="#" class="card-cat-link">Men</a> /
+                            <a href="#" class="card-cat-link">Sports</a>
+                          </div>
+      
+                          <h3 class="h3 card-title">
+                            <a href="#">Air Jordan 7 Retro </a>
+                          </h3>
+      
+                          <data class="card-price" value="170.85">$170.85 <del>$200.21</del></data>
+      
+                        </div>
+      
+                      </div>
+                    </li>
+      
+                  </ul>
+      
+                </div>
+      
+              </div>
+            </section>
+      
+      
+      
+      
+      
+            <!-- 
+              - #SERVICE
+            -->
+      
+            <section class="section service">
+              <div class="container">
+      
+                <ul class="service-list">
+      
+                  <li class="service-item">
+                    <div class="service-card">
+      
+                      <div class="card-icon">
+                        <img src="./assets/images/service-1.png" width="53" height="28" loading="lazy" alt="Service icon">
+                      </div>
+      
+                      <div>
+                        <h3 class="h4 card-title">Free Shiping</h3>
+      
+                        <p class="card-text">
+                          All orders over <span>$150</span>
+                        </p>
+                      </div>
+      
+                    </div>
+                  </li>
+      
+                  <li class="service-item">
+                    <div class="service-card">
+      
+                      <div class="card-icon">
+                        <img src="./assets/images/service-2.png" width="43" height="35" loading="lazy" alt="Service icon">
+                      </div>
+      
+                      <div>
+                        <h3 class="h4 card-title">Quick Payment</h3>
+      
+                        <p class="card-text">
+                          100% secure payment
+                        </p>
+                      </div>
+      
+                    </div>
+                  </li>
+      
+                  <li class="service-item">
+                    <div class="service-card">
+      
+                      <div class="card-icon">
+                        <img src="./assets/images/service-3.png" width="40" height="40" loading="lazy" alt="Service icon">
+                      </div>
+      
+                      <div>
+                        <h3 class="h4 card-title">Free Returns</h3>
+      
+                        <p class="card-text">
+                          Money back in 30 days
+                        </p>
+                      </div>
+      
+                    </div>
+                  </li>
+      
+                  <li class="service-item">
+                    <div class="service-card">
+      
+                      <div class="card-icon">
+                        <img src="./assets/images/service-4.png" width="40" height="40" loading="lazy" alt="Service icon">
+                      </div>
+      
+                      <div>
+                        <h3 class="h4 card-title">24/7 Support</h3>
+      
+                        <p class="card-text">
+                          Get Quick Support
+                        </p>
+                      </div>
+      
+                    </div>
+                  </li>
+      
+                </ul>
+      
+              </div>
+            </section>
+      
+      
+      
+      
+      
+            <!-- 
+              - #INSTA POST
+            -->
+      
+            <section class="section insta-post">
+      
+              <ul class="insta-post-list has-scrollbar">
+      
+                <li class="insta-post-item">
+                  <img src="./assets/images/nike1.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
+                    class="insta-post-banner image-contain">
+      
+                  <a href="#" class="insta-post-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+      
+                <li class="insta-post-item">
+                  <img src="./assets/images/nike2.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
+                    class="insta-post-banner image-contain">
+      
+                  <a href="#" class="insta-post-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+      
+                <li class="insta-post-item">
+                  <img src="./assets/images/nike3.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
+                    class="insta-post-banner image-contain">
+      
+                  <a href="#" class="insta-post-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+      
+                <li class="insta-post-item">
+                  <img src="./assets/images/nike9.jpeg" width="100" height="100" loading="lazy" alt="Instagram post"
+                    class="insta-post-banner image-contain">
+      
+                  <a href="#" class="insta-post-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+      
+                <li class="insta-post-item">
+                  <img src="./assets/images/nike5.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
+                    class="insta-post-banner image-contain">
+      
+                  <a href="#" class="insta-post-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+      
+                <li class="insta-post-item">
+                  <img src="./assets/images/nike6.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
+                    class="insta-post-banner image-contain">
+      
+                  <a href="#" class="insta-post-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+      
+                <li class="insta-post-item">
+                  <img src="./assets/images/nike7.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
+                    class="insta-post-banner image-contain">
+      
+                  <a href="#" class="insta-post-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+      
+                <li class="insta-post-item">
+                  <img src="./assets/images/nike8.jpg" width="100" height="100" loading="lazy" alt="Instagram post"
+                    class="insta-post-banner image-contain">
+      
+                  <a href="#" class="insta-post-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+      
+              </ul>
+      
+            </section>
+          </article>
         </main>
-
-
-        <footer class="site-footer">
+      
+      
+      
+      
+      
+        <!-- 
+          - #FOOTER
+        -->
+      
+        <footer class="footer">
+      
+          <div class="footer-top section">
             <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12 d-flex align-items-center mb-4 pb-2">
-                        <div>
-                            <img src="assets/images/bubbles.png" class="logo img-fluid" alt="">
-                        </div>
-
-                        <ul class="footer-menu d-flex flex-wrap ms-5">
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">About Us</a></li>
-
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Blog</a></li>
-
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Reviews</a></li>
-
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-5 col-12 mb-4 mb-lg-0">
-                        <h5 class="site-footer-title mb-3">Our Services</h5>
-
-                        <ul class="footer-menu">
-                            <li class="footer-menu-item">
-                                <a href="#" class="footer-menu-link">
-                                    <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
-                                    House Cleaning
-                                </a>
-                            </li>
-
-                            <li class="footer-menu-item">
-                                <a href="#" class="footer-menu-link">
-                                    <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
-                                    Car Washing
-                                </a>
-                            </li>
-
-                            <li class="footer-menu-item">
-                                <a href="#" class="footer-menu-link">
-                                    <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
-                                    Laundry
-                                </a>
-                            </li>
-
-                            <li class="footer-menu-item">
-                                <a href="#" class="footer-menu-link">
-                                    <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
-                                    Office Cleaning
-                                </a>
-                            </li>
-
-                            <li class="footer-menu-item">
-                                <a href="#" class="footer-menu-link">
-                                    <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
-                                    Toilet Cleaning
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mb-md-0">
-                        <h5 class="site-footer-title mb-3">Office</h5>
-
-                        <p class="text-white d-flex mt-3 mb-2">
-                            <i class="bi-geo-alt-fill me-2"></i>
-                            Akershusstranda 20, 0150 Oslo, Norway
-                        </p>
-
-                        <p class="text-white d-flex mb-2">
-                            <i class="bi-telephone-fill me-2"></i>
-
-                            <a href="tel: 110-220-9800" class="site-footer-link">
-                                110-220-9800
-                            </a>
-                        </p>
-
-                        <p class="text-white d-flex">
-                            <i class="bi-envelope-fill me-2"></i>
-
-                            <a href="mailto:info@company.com" class="site-footer-link">
-                                info@company.com
-                            </a>
-                        </p>
-
-                        <ul class="social-icon mt-4">
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link button button--skoll">
-                                    <span></span>
-                                    <span class="bi-twitter"></span>
-                                </a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link button button--skoll">
-                                    <span></span>
-                                    <span class="bi-facebook"></span>
-                                </a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link button button--skoll">
-                                    <span></span>
-                                    <span class="bi-instagram"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-6 mt-3 mt-lg-0 mt-md-0">
-                        <div class="featured-block">
-                            <h5 class="text-white mb-3">Service Hours</h5>
-
-                            <strong class="d-block text-white mb-1">Mon - Fri</strong>
-
-                            <p class="text-white mb-3">8:00 AM - 5:30 PM</p>
-
-                            <strong class="d-block text-white mb-1">Sat</strong>
-
-                            <p class="text-white mb-0">6:00 AM - 2:30 PM</p>
-                        </div>
-                    </div>
+      
+              <div class="footer-brand">
+      
+                <a href="#" class="logo">
+                  <img src="./assets/images/logo.svg" width="160" height="50" alt="Footcap logo">
+                </a>
+      
+                <ul class="social-list">
+      
+                  <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-pinterest"></ion-icon>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                  </li>
+      
+                </ul>
+      
+              </div>
+      
+              <div class="footer-link-box">
+      
+                <ul class="footer-list">
+      
+                  <li>
+                    <p class="footer-list-title">Contact Us</p>
+                  </li>
+      
+                  <li>
+                    <address class="footer-link">
+                      <ion-icon name="location"></ion-icon>
+      
+                      <span class="footer-link-text">
+                        2751 S Parker Rd, Aurora, CO 80014, United States
+                      </span>
+                    </address>
+                  </li>
+      
+                  <li>
+                    <a href="tel:+557343673257" class="footer-link">
+                      <ion-icon name="call"></ion-icon>
+      
+                      <span class="footer-link-text">+557343673257</span>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="mailto:footcap@help.com" class="footer-link">
+                      <ion-icon name="mail"></ion-icon>
+      
+                      <span class="footer-link-text">footcap@help.com</span>
+                    </a>
+                  </li>
+      
+                </ul>
+      
+                <ul class="footer-list">
+      
+                  <li>
+                    <p class="footer-list-title">My Account</p>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="footer-link">
+                      <ion-icon name="chevron-forward-outline"></ion-icon>
+      
+                      <span class="footer-link-text">My Account</span>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="footer-link">
+                      <ion-icon name="chevron-forward-outline"></ion-icon>
+      
+                      <span class="footer-link-text">View Cart</span>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="footer-link">
+                      <ion-icon name="chevron-forward-outline"></ion-icon>
+      
+                      <span class="footer-link-text">Wishlist</span>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="footer-link">
+                      <ion-icon name="chevron-forward-outline"></ion-icon>
+      
+                      <span class="footer-link-text">Compare</span>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="footer-link">
+                      <ion-icon name="chevron-forward-outline"></ion-icon>
+      
+                      <span class="footer-link-text">New Products</span>
+                    </a>
+                  </li>
+      
+                </ul>
+      
+                <div class="footer-list">
+      
+                  <p class="footer-list-title">Opening Time</p>
+      
+                  <table class="footer-table">
+                    <tbody>
+      
+                      <tr class="table-row">
+                        <th class="table-head" scope="row">Mon - Tue:</th>
+      
+                        <td class="table-data">8AM - 10PM</td>
+                      </tr>
+      
+                      <tr class="table-row">
+                        <th class="table-head" scope="row">Wed:</th>
+      
+                        <td class="table-data">8AM - 7PM</td>
+                      </tr>
+      
+                      <tr class="table-row">
+                        <th class="table-head" scope="row">Fri:</th>
+      
+                        <td class="table-data">7AM - 12PM</td>
+                      </tr>
+      
+                      <tr class="table-row">
+                        <th class="table-head" scope="row">Sat:</th>
+      
+                        <td class="table-data">9AM - 8PM</td>
+                      </tr>
+      
+                      <tr class="table-row">
+                        <th class="table-head" scope="row">Sun:</th>
+      
+                        <td class="table-data"></td>
+                      </tr>
+      
+                    </tbody>
+                  </table>
+      
                 </div>
-            </div>
-
-            <div class="site-footer-bottom">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <p class="copyright-text mb-0">Copyright © 2036 Clean Work Co., Ltd.</p>
-                        </div>
-                        
-                        <div class="col-lg-6 col-12 text-end">
-                            <p class="copyright-text mb-0">
-                            // Designed by <a href="https://www.tooplate.com" target="_parent">Tooplate</a> //</p>
-                        </div>
-                        
-                    </div>
+      
+                <div class="footer-list">
+      
+                  <p class="footer-list-title">Newsletter</p>
+      
+                  <p class="newsletter-text">
+                    Authoritatively morph 24/7 potentialities with error-free partnerships.
+                  </p>
+      
+                  <form action="" class="newsletter-form">
+                    <input type="email" name="email" required placeholder="Email Address" class="newsletter-input">
+      
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                  </form>
+      
                 </div>
+      
+              </div>
+      
             </div>
+          </div>
+      
+          <div class="footer-bottom">
+            <div class="container">
+      
+              <p class="copyright">
+                &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a>. All Rights Reserved
+              </p>
+      
+            </div>
+          </div>
+      
         </footer>
-
-        <!-- JAVASCRIPT FILES -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/counter.js"></script>
-        <script src="assets/js/countdown.js"></script>
-        <script src="assets/js/init.js"></script>
-        <script src="assets/js/modernizr.js"></script>
-        <script src="assets/js/animated-headline.js"></script>
-        <script src="assets/js/custom.js"></script>
-
-    </body>
+      
+      
+      
+      
+      
+        <!-- 
+          - #GO TO TOP
+        -->
+      
+        <a href="#top" class="go-top-btn" data-go-top>
+          <ion-icon name="arrow-up-outline"></ion-icon>
+        </a>
+      
+      
+      
+      
+      
+        <!-- 
+          - custom js link
+        -->
+        <script src="./assets/js/script.js"></script>
+      
+        <!-- 
+          - ionicon link
+        -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      
+      </body>
 </html>

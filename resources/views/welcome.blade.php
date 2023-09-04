@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Footcap - Find your footware</title>
+        <title>Footcap</title>
       
         <!-- 
           - favicon
@@ -64,19 +64,19 @@
               <ul class="navbar-list">
       
                 <li class="navbar-item">
-                  <a href="#" class="navbar-link">Home</a>
+                  <a href="#" class="navbar-link">Inicio</a>
                 </li>
       
                 <li class="navbar-item">
-                  <a href="about" class="navbar-link">About</a>
+                  <a href="about" class="navbar-link">Acerca de</a>
                 </li>
       
                 <li class="navbar-item">
-                  <a href="#" class="navbar-link">Products</a>
+                  <a href="#" class="navbar-link">Productos</a>
                 </li>
       
                 <li class="navbar-item">
-                  <a href="shop" class="navbar-link">Shop</a>
+                  <a href="shop" class="navbar-link">Tienda</a>
                 </li>
       
                 {{-- <li class="navbar-item">
@@ -84,7 +84,7 @@
                 </li> --}}
       
                 <li class="navbar-item">
-                  <a href="contact" class="navbar-link">Contact</a>
+                  <a href="contact" class="navbar-link">Contacto</a>
                 </li>
       
               </ul>
@@ -95,7 +95,7 @@
                   <button class="nav-action-btn">
                     <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
       
-                    <span class="nav-action-text">Search</span>
+                    <span class="nav-action-text">Buscar</span>
                   </button>
                 </li>
       
@@ -149,17 +149,15 @@
               <div class="container">
       
                 <h2 class="h1 hero-title">
-                  New Summer <strong>Shoes Collection</strong>
+                  Estrena las nuevo <strong>Colecciones de Zapatos</strong>
                 </h2>
       
                 <p class="hero-text">
-                  Competently expedite alternative benefits whereas leading-edge catalysts for change. Globally leverage
-                  existing an
-                  expanded array of leadership.
+                    "Descubre la moda en cada paso. Zapatos elegantes y cómodos para todos los estilos."    
                 </p>
       
                 <button class="btn btn-primary">
-                  <span>Shop Now</span>
+                  <span>Comprar Ahora</span>
       
                   <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                 </button>
@@ -182,10 +180,10 @@
       
                   <li>
                     <div class="collection-card" style="background-image: url('./assets/images/collection-1.jpg')">
-                      <h3 class="h4 card-title">Men Collections</h3>
+                      <h3 class="h4 card-title">Colección Hombres</h3>
       
                       <a href="#" class="btn btn-secondary">
-                        <span>Explore All</span>
+                        <span>Explora</span>
       
                         <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                       </a>
@@ -194,10 +192,10 @@
       
                   <li>
                     <div class="collection-card" style="background-image: url('./assets/images/collection-2.jpg')">
-                      <h3 class="h4 card-title">Women Collections</h3>
+                      <h3 class="h4 card-title">Colección Dama</h3>
       
                       <a href="#" class="btn btn-secondary">
-                        <span>Explore All</span>
+                        <span>Explora</span>
       
                         <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                       </a>
@@ -206,10 +204,10 @@
       
                   <li>
                     <div class="collection-card" style="background-image: url('./assets/images/collection-3.jpg')">
-                      <h3 class="h4 card-title">Sports Collections</h3>
+                      <h3 class="h4 card-title">Colección Deportiva</h3>
       
                       <a href="#" class="btn btn-secondary">
-                        <span>Explore All</span>
+                        <span>Explora</span>
       
                         <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                       </a>
@@ -232,7 +230,7 @@
             <section class="section product">
               <div class="container">
       
-                <h2 class="h2 section-title">Bestsellers Products</h2>
+                <h2 class="h2 section-title">Productos más vendidos</h2>
       
                 <ul class="filter-list">
       
@@ -253,25 +251,25 @@
                   </li>
       
                   <li>
-                    <button class="filter-btn">Bata</button>
+                    <button class="filter-btn">Vans</button>
                   </li>
       
                   <li>
-                    <button class="filter-btn">Apex</button>
+                    <button class="filter-btn">Converse</button>
                   </li>
       
                 </ul>
       
-                <ul class="product-list">
+                <ul class="product-list" id="product-list">
       
-                  <li class="product-item">
+                  <li class="product-item Nike">
                     <div class="product-card" tabindex="0">
       
                       <figure class="card-banner">
                         <img src="./assets/images/product-1.jpg" width="312" height="350" loading="lazy"
                           alt="Running Sneaker Shoes" class="image-contain">
       
-                        <div class="card-badge">New</div>
+                        <div class="card-badge">Nuevo</div>
       
                         <ul class="card-action-list">
       
@@ -288,15 +286,15 @@
                               <ion-icon name="heart-outline"></ion-icon>
                             </button>
       
-                            <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                            <div class="card-action-tooltip" id="card-label-2">Add to favorites</div>
                           </li>
       
                           <li class="card-action-item">
-                            <button class="card-action-btn" aria-labelledby="card-label-3">
+                            <button class="card-action-btn" aria-labelledby="card-label-3" id="quick-view-btn" data-image-src="./assets/images/product-1.jpg">
                               <ion-icon name="eye-outline"></ion-icon>
                             </button>
       
-                            <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                            <div class="card-action-tooltip" id="card-label-3">Ver</div>
                           </li>
       
                           <li class="card-action-item">
@@ -306,33 +304,38 @@
       
                             <div class="card-action-tooltip" id="card-label-4">Compare</div>
                           </li>
-      
+                          <div id="popup-container" class="popup-container">
+                            <div class="popup-content">
+                              <img id="popup-image" class="popup-image" src="" alt="Popup Image">
+                              <button id="close-btn" class="close-btn">X</button>
+                            </div>
+                          </div>
                         </ul>
                       </figure>
       
                       <div class="card-content">
       
                         <div class="card-cat">
-                          <a href="#" class="card-cat-link">Men</a> /
-                          <a href="#" class="card-cat-link">Women</a>
+                          <a href="#" class="card-cat-link">Hombre</a> /
+                          <a href="#" class="card-cat-link">Dama</a>
                         </div>
       
                         <h3 class="h3 card-title">
-                          <a href="#">Running Sneaker Shoes</a>
+                          <a href="#">Zapatillas deportivas para correr</a>
                         </h3>
       
-                        <data class="card-price" value="180.85">$180.85</data>
+                        <data class="card-price" value="180.85">$150.000</data>
       
                       </div>
       
                     </div>
                   </li>
       
-                  <li class="product-item">
+                  <li class="product-item Puma">
                     <div class="product-card" tabindex="0">
       
                       <figure class="card-banner">
-                        <img src="./assets/images/product-2.jpg" width="312" height="350" loading="lazy"
+                        <img src="./assets/images/puma.png" width="312" height="350" loading="lazy"
                           alt="Leather Mens Slipper" class="image-contain">
       
                         <ul class="card-action-list">
@@ -358,7 +361,7 @@
                               <ion-icon name="eye-outline"></ion-icon>
                             </button>
       
-                            <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                            <div class="card-action-tooltip" id="card-label-3">Ver</div>
                           </li>
       
                           <li class="card-action-item">
@@ -375,29 +378,29 @@
                       <div class="card-content">
       
                         <div class="card-cat">
-                          <a href="#" class="card-cat-link">Men</a> /
+                          <a href="#" class="card-cat-link">Hombre</a> /
                           <a href="#" class="card-cat-link">Sports</a>
                         </div>
       
                         <h3 class="h3 card-title">
-                          <a href="#">Leather Mens Slipper</a>
+                          <a href="#">Zapatos Casual Puma</a>
                         </h3>
       
-                        <data class="card-price" value="190.85">$190.85</data>
+                        <data class="card-price" value="190.85">$190.000</data>
       
                       </div>
       
                     </div>
                   </li>
       
-                  <li class="product-item">
+                  <li class="product-item Converse">
                     <div class="product-card" tabindex="0">
       
                       <figure class="card-banner">
-                        <img src="./assets/images/product-3.jpg" width="312" height="350" loading="lazy"
+                        <img src="./assets/images/converse.png" width="312" height="350" loading="lazy"
                           alt="Simple Fabric Shoe" class="image-contain">
       
-                        <div class="card-badge">New</div>
+                        <div class="card-badge">Nuevo</div>
       
                         <ul class="card-action-list">
       
@@ -439,26 +442,26 @@
                       <div class="card-content">
       
                         <div class="card-cat">
-                          <a href="#" class="card-cat-link">Men</a> /
-                          <a href="#" class="card-cat-link">Women</a>
+                          <a href="#" class="card-cat-link">Hombre</a> /
+                          <a href="#" class="card-cat-link">Dama</a>
                         </div>
       
                         <h3 class="h3 card-title">
-                          <a href="#">Simple Fabric Shoe</a>
+                          <a href="#">Converse run star</a>
                         </h3>
       
-                        <data class="card-price" value="160.85">$160.85</data>
+                        <data class="card-price" value="160.85">$200.000</data>
       
                       </div>
       
                     </div>
                   </li>
       
-                  <li class="product-item">
+                  <li class="product-item Vans">
                     <div class="product-card" tabindex="0">
       
                       <figure class="card-banner">
-                        <img src="./assets/images/product-4.jpg" width="312" height="350" loading="lazy"
+                        <img src="./assets/images/vans.png" width="312" height="350" loading="lazy"
                           alt="Air Jordan 7 Retro " class="image-contain">
       
                         <div class="card-badge"> -25%</div>
@@ -503,26 +506,26 @@
                       <div class="card-content">
       
                         <div class="card-cat">
-                          <a href="#" class="card-cat-link">Men</a> /
-                          <a href="#" class="card-cat-link">Sports</a>
+                          <a href="#" class="card-cat-link">Hombre</a> /
+                          <a href="#" class="card-cat-link">Casual</a>
                         </div>
       
                         <h3 class="h3 card-title">
-                          <a href="#">Air Jordan 7 Retro </a>
+                          <a href="#">Vans ward men's </a>
                         </h3>
       
-                        <data class="card-price" value="170.85">$170.85 <del>$200.21</del></data>
+                        <data class="card-price" value="170.85">$170.85 <del>$200.200</del></data>
       
                       </div>
       
                     </div>
                   </li>
       
-                  <li class="product-item">
+                  <li class="product-item Adidas">
                     <div class="product-card" tabindex="0">
       
                       <figure class="card-banner">
-                        <img src="./assets/images/product-5.jpg" width="312" height="350" loading="lazy"
+                        <img src="./assets/images/adidas3.png" width="312" height="350" loading="lazy"
                           alt="Nike Air Max 270 SE" class="image-contain">
       
                         <div class="card-badge">New</div>
@@ -567,26 +570,26 @@
                       <div class="card-content">
       
                         <div class="card-cat">
-                          <a href="#" class="card-cat-link">Men</a> /
-                          <a href="#" class="card-cat-link">Women</a>
+                          <a href="#" class="card-cat-link">Hombre</a> /
+                          <a href="#" class="card-cat-link">Dama</a>
                         </div>
       
                         <h3 class="h3 card-title">
-                          <a href="#">Nike Air Max 270 SE</a>
+                          <a href="#">Adidas Superstar</a>
                         </h3>
       
-                        <data class="card-price" value="120.85">$120.85</data>
+                        <data class="card-price" value="120.85">$140.000</data>
       
                       </div>
       
                     </div>
                   </li>
       
-                  <li class="product-item">
+                  <li class="product-item Nike">
                     <div class="product-card" tabindex="0">
       
                       <figure class="card-banner">
-                        <img src="./assets/images/product-6.jpg" width="312" height="350" loading="lazy"
+                        <img src="./assets/images/nikem.png" width="312" height="350" loading="lazy"
                           alt="Adidas Sneakers Shoes" class="image-contain">
       
                         <ul class="card-action-list">
@@ -629,26 +632,26 @@
                       <div class="card-content">
       
                         <div class="card-cat">
-                          <a href="#" class="card-cat-link">Men</a> /
-                          <a href="#" class="card-cat-link">Women</a>
+                          <a href="#" class="card-cat-link">Hombre</a> /
+                          <a href="#" class="card-cat-link">Dama</a>
                         </div>
       
                         <h3 class="h3 card-title">
-                          <a href="#">Adidas Sneakers Shoes</a>
+                          <a href="#">Nike Sneakers Shoes</a>
                         </h3>
       
-                        <data class="card-price" value="100.85">$100.85</data>
+                        <data class="card-price" value="100.85">$100.000</data>
       
                       </div>
       
                     </div>
                   </li>
       
-                  <li class="product-item">
+                  <li class="product-item Converse">
                     <div class="product-card" tabindex="0">
       
                       <figure class="card-banner">
-                        <img src="./assets/images/product-7.jpg" width="312" height="350" loading="lazy"
+                        <img src="./assets/images/converse2.png" width="312" height="350" loading="lazy"
                           alt="Nike Basketball shoes" class="image-contain">
       
                         <ul class="card-action-list">
@@ -691,26 +694,26 @@
                       <div class="card-content">
       
                         <div class="card-cat">
-                          <a href="#" class="card-cat-link">Men</a> /
+                          <a href="#" class="card-cat-link">Hombre</a> /
                           <a href="#" class="card-cat-link">Sports</a>
                         </div>
       
                         <h3 class="h3 card-title">
-                          <a href="#">Nike Basketball shoes</a>
+                          <a href="#">Converse All Star</a>
                         </h3>
       
-                        <data class="card-price" value="120.85">$120.85</data>
+                        <data class="card-price" value="120.85">$120.000</data>
       
                       </div>
       
                     </div>
                   </li>
       
-                  <li class="product-item">
+                  <li class="product-item Puma">
                     <div class="product-card" tabindex="0">
       
                       <figure class="card-banner">
-                        <img src="./assets/images/product-8.jpg" width="312" height="350" loading="lazy"
+                        <img src="./assets/images/puma2.png" width="312" height="350" loading="lazy"
                           alt="Simple Fabric Shoe" class="image-contain">
       
                         <ul class="card-action-list">
@@ -787,13 +790,13 @@
                 <ul class="cta-list">
       
                   <li>
-                    <div class="cta-card" style="background-image: url('./assets/images/cta-1.jpg')">
-                      <p class="card-subtitle">Adidas Shoes</p>
+                    <div class="cta-card" style="background-image: url('./assets/images/ct.jpg')">
+                      <p class="card-subtitle">Zapatos Adidas</p>
       
-                      <h3 class="h2 card-title">The Summer Sale Off 50%</h3>
+                      <h3 class="h2 card-title">La oferta de verano con un 50% de descuento</h3>
       
                       <a href="#" class="btn btn-link">
-                        <span>Shop Now</span>
+                        <span>Comprar Ahora</span>
       
                         <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                       </a>
@@ -802,12 +805,12 @@
       
                   <li>
                     <div class="cta-card" style="background-image: url('./assets/images/cta-2.jpg')">
-                      <p class="card-subtitle">Nike Shoes</p>
+                      <p class="card-subtitle">Zapatos Nike</p>
       
-                      <h3 class="h2 card-title">Makes Yourself Keep Sporty</h3>
+                      <h3 class="h2 card-title">Te hace mantener deportiva</h3>
       
                       <a href="#" class="btn btn-link">
-                        <span>Shop Now</span>
+                        <span>Comprar Ahora</span>
       
                         <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                       </a>
@@ -1132,10 +1135,10 @@
                       </div>
       
                       <div>
-                        <h3 class="h4 card-title">Free Shiping</h3>
+                        <h3 class="h4 card-title">ENVÍO GRATIS</h3>
       
                         <p class="card-text">
-                          All orders over <span>$150</span>
+                            Todos los pedidos superiores a <span>$150</span>
                         </p>
                       </div>
       
@@ -1150,10 +1153,10 @@
                       </div>
       
                       <div>
-                        <h3 class="h4 card-title">Quick Payment</h3>
+                        <h3 class="h4 card-title">Pago rápido</h3>
       
                         <p class="card-text">
-                          100% secure payment
+                            Pago 100% seguro
                         </p>
                       </div>
       
@@ -1168,10 +1171,10 @@
                       </div>
       
                       <div>
-                        <h3 class="h4 card-title">Free Returns</h3>
+                        <h3 class="h4 card-title">Devoluciones Gratis</h3>
       
                         <p class="card-text">
-                          Money back in 30 days
+                            Devolución de dinero en 30 días
                         </p>
                       </div>
       
@@ -1525,6 +1528,6 @@
         -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-      
+
       </body>
 </html>

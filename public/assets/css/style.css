@@ -763,6 +763,49 @@ body {
 
 .insta-post-link:is(:hover, :focus) { opacity: 1; }
 
+/* Estilos para la ventana emergente */
+.popup-container {
+  display: none; /* Oculta la ventana emergente por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background-color: transparent; /* Fondo semitransparente */
+  z-index: 999; /* Asegura que la ventana emergente esté en la parte superior */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex; /* Usa flexbox para centrar vertical y horizontalmente */
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-image {
+  max-width: 100%;
+  max-height: 80vh;
+  margin: 0 auto; /* Centra horizontalmente la imagen */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: #333;
+}
 
 
 /*-----------------------------------*\

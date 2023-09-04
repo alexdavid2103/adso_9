@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo.css">
@@ -31,7 +31,7 @@
     <section class="section product">
         <div class="container">
 
-          <h2 class="h2 section-title">Bestsellers Products</h2>
+          <h2 class="h2 section-title">Productos más vendidos</h2>
 
           <ul class="filter-list">
 
@@ -52,25 +52,25 @@
             </li>
 
             <li>
-              <button class="filter-btn">Bata</button>
+              <button class="filter-btn">Vans</button>
             </li>
 
             <li>
-              <button class="filter-btn">Apex</button>
+              <button class="filter-btn">Converse</button>
             </li>
 
           </ul>
 
-          <ul class="product-list">
+          <ul class="product-list" id="product-list">
 
-            <li class="product-item">
+            <li class="product-item Nike">
               <div class="product-card" tabindex="0">
 
                 <figure class="card-banner">
                   <img src="./assets/images/product-1.jpg" width="312" height="350" loading="lazy"
                     alt="Running Sneaker Shoes" class="image-contain">
 
-                  <div class="card-badge">New</div>
+                  <div class="card-badge">Nuevo</div>
 
                   <ul class="card-action-list">
 
@@ -87,15 +87,15 @@
                         <ion-icon name="heart-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                      <div class="card-action-tooltip" id="card-label-2">Add to favorites</div>
                     </li>
 
                     <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-3">
+                      <button class="card-action-btn" aria-labelledby="card-label-3" id="quick-view-btn" data-image-src="./assets/images/product-1.jpg">
                         <ion-icon name="eye-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                      <div class="card-action-tooltip" id="card-label-3">Ver</div>
                     </li>
 
                     <li class="card-action-item">
@@ -105,33 +105,38 @@
 
                       <div class="card-action-tooltip" id="card-label-4">Compare</div>
                     </li>
-
+                    <div id="popup-container" class="popup-container">
+                      <div class="popup-content">
+                        <img id="popup-image" class="popup-image" src="" alt="Popup Image">
+                        <button id="close-btn" class="close-btn">X</button>
+                      </div>
+                    </div>
                   </ul>
                 </figure>
 
                 <div class="card-content">
 
                   <div class="card-cat">
-                    <a href="#" class="card-cat-link">Men</a> /
-                    <a href="#" class="card-cat-link">Women</a>
+                    <a href="#" class="card-cat-link">Hombre</a> /
+                    <a href="#" class="card-cat-link">Dama</a>
                   </div>
 
                   <h3 class="h3 card-title">
-                    <a href="#">Running Sneaker Shoes</a>
+                    <a href="#">Zapatillas deportivas para correr</a>
                   </h3>
 
-                  <data class="card-price" value="180.85">$180.85</data>
+                  <data class="card-price" value="180.85">$150.000</data>
 
                 </div>
 
               </div>
             </li>
 
-            <li class="product-item">
+            <li class="product-item Puma">
               <div class="product-card" tabindex="0">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/product-2.jpg" width="312" height="350" loading="lazy"
+                  <img src="./assets/images/puma.png" width="312" height="350" loading="lazy"
                     alt="Leather Mens Slipper" class="image-contain">
 
                   <ul class="card-action-list">
@@ -157,7 +162,7 @@
                         <ion-icon name="eye-outline"></ion-icon>
                       </button>
 
-                      <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                      <div class="card-action-tooltip" id="card-label-3">Ver</div>
                     </li>
 
                     <li class="card-action-item">
@@ -174,29 +179,29 @@
                 <div class="card-content">
 
                   <div class="card-cat">
-                    <a href="#" class="card-cat-link">Men</a> /
+                    <a href="#" class="card-cat-link">Hombre</a> /
                     <a href="#" class="card-cat-link">Sports</a>
                   </div>
 
                   <h3 class="h3 card-title">
-                    <a href="#">Leather Mens Slipper</a>
+                    <a href="#">Zapatos Casual Puma</a>
                   </h3>
 
-                  <data class="card-price" value="190.85">$190.85</data>
+                  <data class="card-price" value="190.85">$190.000</data>
 
                 </div>
 
               </div>
             </li>
 
-            <li class="product-item">
+            <li class="product-item Converse">
               <div class="product-card" tabindex="0">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/product-3.jpg" width="312" height="350" loading="lazy"
+                  <img src="./assets/images/converse.png" width="312" height="350" loading="lazy"
                     alt="Simple Fabric Shoe" class="image-contain">
 
-                  <div class="card-badge">New</div>
+                  <div class="card-badge">Nuevo</div>
 
                   <ul class="card-action-list">
 
@@ -238,26 +243,26 @@
                 <div class="card-content">
 
                   <div class="card-cat">
-                    <a href="#" class="card-cat-link">Men</a> /
-                    <a href="#" class="card-cat-link">Women</a>
+                    <a href="#" class="card-cat-link">Hombre</a> /
+                    <a href="#" class="card-cat-link">Dama</a>
                   </div>
 
                   <h3 class="h3 card-title">
-                    <a href="#">Simple Fabric Shoe</a>
+                    <a href="#">Converse run star</a>
                   </h3>
 
-                  <data class="card-price" value="160.85">$160.85</data>
+                  <data class="card-price" value="160.85">$200.000</data>
 
                 </div>
 
               </div>
             </li>
 
-            <li class="product-item">
+            <li class="product-item Vans">
               <div class="product-card" tabindex="0">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/product-4.jpg" width="312" height="350" loading="lazy"
+                  <img src="./assets/images/vans.png" width="312" height="350" loading="lazy"
                     alt="Air Jordan 7 Retro " class="image-contain">
 
                   <div class="card-badge"> -25%</div>
@@ -302,26 +307,26 @@
                 <div class="card-content">
 
                   <div class="card-cat">
-                    <a href="#" class="card-cat-link">Men</a> /
-                    <a href="#" class="card-cat-link">Sports</a>
+                    <a href="#" class="card-cat-link">Hombre</a> /
+                    <a href="#" class="card-cat-link">Casual</a>
                   </div>
 
                   <h3 class="h3 card-title">
-                    <a href="#">Air Jordan 7 Retro </a>
+                    <a href="#">Vans ward men's </a>
                   </h3>
 
-                  <data class="card-price" value="170.85">$170.85 <del>$200.21</del></data>
+                  <data class="card-price" value="170.85">$170.85 <del>$200.200</del></data>
 
                 </div>
 
               </div>
             </li>
 
-            <li class="product-item">
+            <li class="product-item Adidas">
               <div class="product-card" tabindex="0">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/product-5.jpg" width="312" height="350" loading="lazy"
+                  <img src="./assets/images/adidas3.png" width="312" height="350" loading="lazy"
                     alt="Nike Air Max 270 SE" class="image-contain">
 
                   <div class="card-badge">New</div>
@@ -366,26 +371,26 @@
                 <div class="card-content">
 
                   <div class="card-cat">
-                    <a href="#" class="card-cat-link">Men</a> /
-                    <a href="#" class="card-cat-link">Women</a>
+                    <a href="#" class="card-cat-link">Hombre</a> /
+                    <a href="#" class="card-cat-link">Dama</a>
                   </div>
 
                   <h3 class="h3 card-title">
-                    <a href="#">Nike Air Max 270 SE</a>
+                    <a href="#">Adidas Superstar</a>
                   </h3>
 
-                  <data class="card-price" value="120.85">$120.85</data>
+                  <data class="card-price" value="120.85">$140.000</data>
 
                 </div>
 
               </div>
             </li>
 
-            <li class="product-item">
+            <li class="product-item Nike">
               <div class="product-card" tabindex="0">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/product-6.jpg" width="312" height="350" loading="lazy"
+                  <img src="./assets/images/nikem.png" width="312" height="350" loading="lazy"
                     alt="Adidas Sneakers Shoes" class="image-contain">
 
                   <ul class="card-action-list">
@@ -428,26 +433,26 @@
                 <div class="card-content">
 
                   <div class="card-cat">
-                    <a href="#" class="card-cat-link">Men</a> /
-                    <a href="#" class="card-cat-link">Women</a>
+                    <a href="#" class="card-cat-link">Hombre</a> /
+                    <a href="#" class="card-cat-link">Dama</a>
                   </div>
 
                   <h3 class="h3 card-title">
-                    <a href="#">Adidas Sneakers Shoes</a>
+                    <a href="#">Nike Sneakers Shoes</a>
                   </h3>
 
-                  <data class="card-price" value="100.85">$100.85</data>
+                  <data class="card-price" value="100.85">$100.000</data>
 
                 </div>
 
               </div>
             </li>
 
-            <li class="product-item">
+            <li class="product-item Converse">
               <div class="product-card" tabindex="0">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/product-7.jpg" width="312" height="350" loading="lazy"
+                  <img src="./assets/images/converse2.png" width="312" height="350" loading="lazy"
                     alt="Nike Basketball shoes" class="image-contain">
 
                   <ul class="card-action-list">
@@ -490,26 +495,26 @@
                 <div class="card-content">
 
                   <div class="card-cat">
-                    <a href="#" class="card-cat-link">Men</a> /
+                    <a href="#" class="card-cat-link">Hombre</a> /
                     <a href="#" class="card-cat-link">Sports</a>
                   </div>
 
                   <h3 class="h3 card-title">
-                    <a href="#">Nike Basketball shoes</a>
+                    <a href="#">Converse All Star</a>
                   </h3>
 
-                  <data class="card-price" value="120.85">$120.85</data>
+                  <data class="card-price" value="120.85">$120.000</data>
 
                 </div>
 
               </div>
             </li>
 
-            <li class="product-item">
+            <li class="product-item Puma">
               <div class="product-card" tabindex="0">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/product-8.jpg" width="312" height="350" loading="lazy"
+                  <img src="./assets/images/puma2.png" width="312" height="350" loading="lazy"
                     alt="Simple Fabric Shoe" class="image-contain">
 
                   <ul class="card-action-list">
@@ -567,12 +572,12 @@
               </div>
             </li>
 
-            <li class="product-item">
+            <li class="product-item Converse">
                 <div class="product-card" tabindex="0">
   
                   <figure class="card-banner">
-                    <img src="./assets/images/product-8.jpg" width="312" height="350" loading="lazy"
-                      alt="Simple Fabric Shoe" class="image-contain">
+                    <img src="./assets/images/converse2.png" width="312" height="350" loading="lazy"
+                      alt="Nike Basketball shoes" class="image-contain">
   
                     <ul class="card-action-list">
   
@@ -614,27 +619,27 @@
                   <div class="card-content">
   
                     <div class="card-cat">
-                      <a href="#" class="card-cat-link">Men</a> /
-                      <a href="#" class="card-cat-link">Women</a>
+                      <a href="#" class="card-cat-link">Hombre</a> /
+                      <a href="#" class="card-cat-link">Sports</a>
                     </div>
   
                     <h3 class="h3 card-title">
-                      <a href="#">Simple Fabric Shoe</a>
+                      <a href="#">Converse All Star</a>
                     </h3>
   
-                    <data class="card-price" value="100.85">$100.85</data>
+                    <data class="card-price" value="120.85">$120.000</data>
   
                   </div>
   
                 </div>
               </li>
 
-              <li class="product-item">
+              <li class="product-item Converse">
                 <div class="product-card" tabindex="0">
   
                   <figure class="card-banner">
-                    <img src="./assets/images/product-8.jpg" width="312" height="350" loading="lazy"
-                      alt="Simple Fabric Shoe" class="image-contain">
+                    <img src="./assets/images/converse2.png" width="312" height="350" loading="lazy"
+                      alt="Nike Basketball shoes" class="image-contain">
   
                     <ul class="card-action-list">
   
@@ -676,27 +681,27 @@
                   <div class="card-content">
   
                     <div class="card-cat">
-                      <a href="#" class="card-cat-link">Men</a> /
-                      <a href="#" class="card-cat-link">Women</a>
+                      <a href="#" class="card-cat-link">Hombre</a> /
+                      <a href="#" class="card-cat-link">Sports</a>
                     </div>
   
                     <h3 class="h3 card-title">
-                      <a href="#">Simple Fabric Shoe</a>
+                      <a href="#">Converse All Star</a>
                     </h3>
   
-                    <data class="card-price" value="100.85">$100.85</data>
+                    <data class="card-price" value="120.85">$120.000</data>
   
                   </div>
   
                 </div>
               </li>
 
-              <li class="product-item">
+              <li class="product-item Converse">
                 <div class="product-card" tabindex="0">
   
                   <figure class="card-banner">
-                    <img src="./assets/images/product-8.jpg" width="312" height="350" loading="lazy"
-                      alt="Simple Fabric Shoe" class="image-contain">
+                    <img src="./assets/images/converse2.png" width="312" height="350" loading="lazy"
+                      alt="Nike Basketball shoes" class="image-contain">
   
                     <ul class="card-action-list">
   
@@ -738,27 +743,27 @@
                   <div class="card-content">
   
                     <div class="card-cat">
-                      <a href="#" class="card-cat-link">Men</a> /
-                      <a href="#" class="card-cat-link">Women</a>
+                      <a href="#" class="card-cat-link">Hombre</a> /
+                      <a href="#" class="card-cat-link">Sports</a>
                     </div>
   
                     <h3 class="h3 card-title">
-                      <a href="#">Simple Fabric Shoe</a>
+                      <a href="#">Converse All Star</a>
                     </h3>
   
-                    <data class="card-price" value="100.85">$100.85</data>
+                    <data class="card-price" value="120.85">$120.000</data>
   
                   </div>
   
                 </div>
               </li>
 
-              <li class="product-item">
+              <li class="product-item Converse">
                 <div class="product-card" tabindex="0">
   
                   <figure class="card-banner">
-                    <img src="./assets/images/product-8.jpg" width="312" height="350" loading="lazy"
-                      alt="Simple Fabric Shoe" class="image-contain">
+                    <img src="./assets/images/converse2.png" width="312" height="350" loading="lazy"
+                      alt="Nike Basketball shoes" class="image-contain">
   
                     <ul class="card-action-list">
   
@@ -800,15 +805,15 @@
                   <div class="card-content">
   
                     <div class="card-cat">
-                      <a href="#" class="card-cat-link">Men</a> /
-                      <a href="#" class="card-cat-link">Women</a>
+                      <a href="#" class="card-cat-link">Hombre</a> /
+                      <a href="#" class="card-cat-link">Sports</a>
                     </div>
   
                     <h3 class="h3 card-title">
-                      <a href="#">Simple Fabric Shoe</a>
+                      <a href="#">Converse All Star</a>
                     </h3>
   
-                    <data class="card-price" value="100.85">$100.85</data>
+                    <data class="card-price" value="120.85">$120.000</data>
   
                   </div>
   
